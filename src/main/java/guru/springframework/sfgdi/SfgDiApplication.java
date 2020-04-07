@@ -18,20 +18,20 @@ public class SfgDiApplication {
 		// From the context, give me an instance of the been type "MyController"
 		MyController myController = (MyController)ctx.getBean("myController"); // the classname starting with a lower case
 
-		String greetings = myController.sayHello();
-		System.out.println(greetings);
+		System.out.println("------- Primary");
+		System.out.println(myController.sayHello());
 
-		System.out.println("------- Property injected controller");
+		System.out.println("------- Property");
 
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController)ctx.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreeting());
 
-		System.out.println("------- Setter injected controller");
+		System.out.println("------- Setter");
 
 		SetterInjectedController setterInjectedController = (SetterInjectedController)ctx.getBean("setterInjectedController");
 		System.out.println(setterInjectedController.getGreeting());
 
-		System.out.println("------- Constructor injected controller");
+		System.out.println("------- Constructor");
 
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController)ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
