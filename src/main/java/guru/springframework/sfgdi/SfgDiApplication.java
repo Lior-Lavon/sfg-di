@@ -15,6 +15,11 @@ public class SfgDiApplication {
 		I18nController i18nController = (I18nController)ctx.getBean("i18nController");
 		System.out.println(i18nController.sayHello());
 
+		PetController petController = (PetController)ctx.getBean("petController");
+
+		System.out.println("------- Pet");
+		System.out.println(petController.whichPetIsTheBest());
+
 		// From the context, give me an instance of the been type "MyController"
 		MyController myController = (MyController)ctx.getBean("myController"); // the classname starting with a lower case
 
