@@ -2,6 +2,7 @@ package guru.springframework.sfgdi;
 
 import guru.springframework.sfgdi.controllers.*;
 import guru.springframework.sfgdi.examplebean.FakeDataSource;
+import guru.springframework.sfgdi.examplebean.FakeJMLSource;
 import guru.springframework.sfgdi.examplebean.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +25,10 @@ public class SfgDiApplication {
 		// load the fake datasource value from the property file
 		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker)ctx.getBean(FakeJmsBroker.class);
 		System.out.println(fakeJmsBroker);
+
+		// load JML property file
+		FakeJMLSource fakeJMLSource = (FakeJMLSource)ctx.getBean(FakeJMLSource.class);
+		System.out.println(fakeJMLSource);
 
 
 

@@ -1,0 +1,35 @@
+# this is a comment
+
+# yml is used to describe data stracture
+
+name: John
+
+# array of names
+names:
+  - Jona
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+#complex objects
+book:
+  author: Joe Buck
+  publisher: random house
+
+#string value
+string_val: "This is't a quote"
+#boolean value
+truth: yes #yes, True, true
+negative_bool: no #no, False, false
+
+#include new line
+include_new_line: |
+  fsdf sdfsdf sdfsf
+  dfsdf sdfsdf dfdf
+  sdfsdf sfsdfs fsfdsf
+
+exclude_new_line: >
+  sdfsdf dfsfd
+  sdf sdfsf sdfsf sdfsdf
+  sdfsgdfg dfgdfgd
