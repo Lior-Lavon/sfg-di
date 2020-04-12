@@ -10,13 +10,13 @@ public class I18nController {
 
     // this controller will return two different languages based on the profile
 
-    private final GreetingService greetingService;
-
-    public I18nController(@Qualifier("i18nService") GreetingService greetingService) {
-        this.greetingService = greetingService;
-    }
-
-    public String sayHello(){
-        return greetingService.sayGreeting();
-    }
+//    private final GreetingService greetingService;
+//
+//    public I18nController(@Qualifier("i18nService") GreetingService greetingService) {
+//        this.greetingService = greetingService;
+//    }
+//
+//    public String sayHello(){
+//        return greetingService.sayGreeting();
+//    }
 }

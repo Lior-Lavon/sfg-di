@@ -3,6 +3,7 @@ package guru.springframework.sfgdi.config;
 import guru.springframework.sfgdi.examplebean.FakeDataSource;
 import guru.springframework.sfgdi.examplebean.FakeJMLSource;
 import guru.springframework.sfgdi.examplebean.FakeJmsBroker;
+import guru.springframework.sfgdi.examplebean.TestProfile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -48,6 +49,9 @@ public class PropertyConfig {
     @Value("${guru.jml.dburl}")
     String jmlUrl;
 
+    @Value("${guru.test.profile}")
+    String profile;
+
 
     // Populate and return the FakeDataSource class
     @Bean
@@ -75,6 +79,13 @@ public class PropertyConfig {
         fakeJMLSource.setPassword(jmlPassword);
         fakeJMLSource.setUrl(jmlUrl);
         return fakeJMLSource;
+    }
+
+    @Bean
+    public TestProfile testProfile(){
+        TestProfile testProfile = new TestProfile();
+        testProfile.setProfile(profile);
+        return testProfile;
     }
 
 }
